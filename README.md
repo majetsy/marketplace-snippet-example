@@ -26,8 +26,6 @@ This folder demonstrates a modern, production-grade implementation of a search a
 
 ## Technologies Used
 
-## Technologies Used
-
 - [Next.js]
 - [React]
 - [Zustand]
