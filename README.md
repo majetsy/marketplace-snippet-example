@@ -1,30 +1,30 @@
 # Marketplace Frontend – Search & Product Example
 
-This folder demonstrates a modern, production-grade implementation of a search and product listing experience for an e-commerce marketplace, built with **Next.js**, **React**, and **Zustand**.
+This folder demonstrates a modern, production-grade implementation of a search and product listing experience for an e-commerce marketplace, built with **Next.js**, **TypeScript**, **React**, **elasticSearch** and **Zustand**.
 
 ## Features
 
-- **Full-text Search:**  
-  Users can search for products by name, brand, or keywords, with support for both Cyrillic and Latin scripts (Mongolians use cyrillic).
-- **Real-time Stock Updates:**  
-  Product stock is updated in real time using WebSocket events, ensuring users always see the latest availability.
-- **Filtering & Sorting:**  
-  Users can filter and sort search results by various criteria, with fast, responsive UI updates.
-- **Recent Searches & History:**  
-  The app tracks and displays recent search queries and recently viewed products for quick access.
-- **Performance Optimizations:**  
-  Uses memoization, throttling, and efficient state management for a smooth user experience and mobile-friendly layouts.
+- **Full-text Search**  
+  Users can search products by name, brand, or keywords, with support for both Cyrillic and Latin scripts (optimized for Mongolian user base).
+- **Real-time Stock Updates**  
+  Live WebSocket integration ensures product stock levels are always up to date.
+- **Filtering & Sorting**  
+  Enables sorting and filtering across multiple criteria with fast and responsive UI updates.
+- **Search History & Recently Viewed**  
+  Tracks and displays recent search queries and seen items, enhancing user flow.
+- **Performance Optimizations**  
+  Built-in memoization, throttling, and scoped state for fast response and smooth performance on both desktop and mobile.
 
 ## Why is this important?
 
-- **Real-world Complexity:**  
-  This codebase demonstrates how to handle complex UI state, real-time data, and user interactions in a scalable way.
-- **Modern Best Practices:**  
-  Uses hooks, functional components, modular state management, and clean separation of concerns.
-- **Recruiter Value:**  
-  Shows ability to build interactive, maintainable, and performant web applications with modern tools.
+- **Real-world Complexity**  
+  Demonstrates the handling of complex UI states, async data, and real-time syncing in a scalable and maintainable architecture.
+- **Best Practices**  
+  Utilizes Next.js routing, functional components, Zustand for global state, and strict TypeScript typing.
+- **Production-Ready Code**  
+  Extracted from a larger live application used in production at a telecom-backed e-commerce platform.
 
-## Technologies Used
+## Technologies
 
 - [Next.js]
 - [React]
@@ -35,13 +35,15 @@ This folder demonstrates a modern, production-grade implementation of a search a
 - [ElasticSearch]:  
   Used as the primary search engine for products. ElasticSearch enables fast, full-text, and faceted search, supporting features like typo-      tolerance, relevance ranking, and instant suggestions. The `CAT_API.search` endpoint connects directly to ElasticSearch, providing users       with real-time, highly relevant search results—something that would be difficult and slow with a traditional relational database.
 
-## How it works
+## Folder Structure
 
-- **Search:**  
-  The user types a query, which is processed and sent to the backend. Results are displayed with highlights and suggestions.
-- **Real-time Stock:**  
-  The frontend listens for stock_update events and updates product stock instantly.
-- **History:**  
-  Recent searches and seen products are stored and displayed for convenience.
+/search/[field]/[item]/page.tsx -> Dynamic Product Results
+/searched/page.tsx -> Recently Searched
+/seen/page.tsx -> Recently Viewed
+layout.tsx -> Layout Wrapper
+page.tsx -> Main Search Landing
+searchStore.ts -> Zustand Store
+---
 
-This folder is an example of my ability to build robust, user-friendly, and real-time web applications using modern frontend technologies.
+This example is a small showcase of my larger full-stack work involving real-time commerce, containerized backend (Docker/Kubernetes), and multi-database integration (PostgreSQL, MongoDB, ElasticSearch, Redis).
+
