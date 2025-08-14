@@ -1,49 +1,47 @@
-# Marketplace Frontend – Search & Product Example
+Marketplace Frontend – Search & Product Module
 
-This folder demonstrates a modern, production-grade implementation of a search and product listing experience for an e-commerce marketplace, built with **Next.js**, **TypeScript**, **React**, **elasticSearch** and **Zustand**.
+This is a production-ready implementation of a search and product listing feature for an e-commerce marketplace, built with Next.js, TypeScript, React, ElasticSearch, and Zustand.
+
+The code is adapted from a live telecom-backed platform serving 400K–700K monthly active users.
+It’s designed for real-time accuracy, multilingual support (Mongolian + English), and smooth performance on both desktop and mobile.
 
 ## Features
 
-- **Full-text Search**  
-  Users can search products by name, brand, or keywords, with support for both Cyrillic and Latin scripts (optimized for Mongolian user base).
-- **Real-time Stock Updates**  
-  Live WebSocket integration ensures product stock levels are always up to date.
-- **Filtering & Sorting**  
-  Enables sorting and filtering across multiple criteria with fast and responsive UI updates.
-- **Search History & Recently Viewed**  
-  Tracks and displays recent search queries and seen items, enhancing user flow.
-- **Performance Optimizations**  
-  Built-in memoization, throttling, and scoped state for fast response and smooth performance on both desktop and mobile.
+-Full-text Search
+Users can search by name, brand, or keywords — works seamlessly with both Cyrillic and Latin scripts.
 
-## Why is this important?
+-Real-time Stock Updates
+WebSocket integration ensures stock data stays up-to-date without page reloads.
 
-- **Real-world Complexity**  
-  Demonstrates the handling of complex UI states, async data, and real-time syncing in a scalable and maintainable architecture.
-- **Best Practices**  
-  Utilizes Next.js routing, functional components, Zustand for global state, and strict TypeScript typing.
-- **Production-Ready Code**  
-  Extracted from a larger live application used in production at a telecom-backed e-commerce platform.
+-Filtering & Sorting
+Quickly filter and sort results on the client side across multiple criteria.
 
-## Technologies
+-Search History & Recently Viewed
+Improves UX by remembering past searches and recently viewed items.
 
-- [Next.js]
-- [React]
-- [Zustand]
-- [Socket.io-client]
-- [Tailwind CSS]
-- [Lodash]
-- [ElasticSearch]:  
-  Used as the primary search engine for products. ElasticSearch enables fast, full-text, and faceted search, supporting features like typo-      tolerance, relevance ranking, and instant suggestions. The `CAT_API.search` endpoint connects directly to ElasticSearch, providing users       with real-time, highly relevant search results—something that would be difficult and slow with a traditional relational database.
+-Performance-first Architecture
+Scoped state, memoization, and throttling deliver fast, responsive interactions.
 
-## Folder Structure
+## Why it matters
 
-/search/[field]/[item]/page.tsx -> Dynamic Product Results
-/searched/page.tsx -> Recently Searched
-/seen/page.tsx -> Recently Viewed
-layout.tsx -> Layout Wrapper
-page.tsx -> Main Search Landing
-searchStore.ts -> Zustand Store
----
+This module handles complex UI states, asynchronous data, and real-time updates in a scalable, maintainable way.
+While building it, I focused on reusable components and lightweight client-side logic to make future updates easier.
 
-This example is a small showcase of my larger full-stack work involving real-time commerce, containerized backend (Docker/Kubernetes), and multi-database integration (PostgreSQL, MongoDB, ElasticSearch, Redis).
+## Tech Stack
+Next.js – Routing & server-side rendering
+TypeScript – Type safety
+Zustand – Lightweight global state management
+Socket.io-client – Real-time updates
+Tailwind CSS – Responsive UI
+Lodash – Utility functions
+ElasticSearch – Fast, typo-tolerant search
 
+## Structure
+/search/[field]/[item]/page.tsx – Dynamic search results
+/searched/page.tsx – Recently searched items
+/seen/page.tsx – Recently viewed items
+layout.tsx – Layout wrapper
+page.tsx – Main search landing
+searchStore.ts – Zustand store
+
+This snippet represents a small part of my broader full-stack work, which includes real-time commerce, containerized deployments (Docker/Kubernetes), and multi-database integration (PostgreSQL, MongoDB, ElasticSearch, Redis).
