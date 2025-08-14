@@ -28,20 +28,33 @@ This module handles complex UI states, asynchronous data, and real-time updates 
 While building it, I focused on reusable components and lightweight client-side logic to make future updates easier.
 
 ## Tech Stack
+
 Next.js – Routing & server-side rendering
+
 TypeScript – Type safety
+
 Zustand – Lightweight global state management
+
 Socket.io-client – Real-time updates
+
 Tailwind CSS – Responsive UI
+
 Lodash – Utility functions
+
 ElasticSearch – Fast, typo-tolerant search
+
 
 ## Structure
 /search/[field]/[item]/page.tsx – Dynamic search results
+
 /searched/page.tsx – Recently searched items
+
 /seen/page.tsx – Recently viewed items
+
 layout.tsx – Layout wrapper
+
 page.tsx – Main search landing
+
 searchStore.ts – Zustand store
 
 This snippet represents a small part of my broader full-stack work, which includes real-time commerce, containerized deployments (Docker/Kubernetes), and multi-database integration (PostgreSQL, MongoDB, ElasticSearch, Redis).
